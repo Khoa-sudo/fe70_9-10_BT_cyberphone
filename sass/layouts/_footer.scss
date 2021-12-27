@@ -1,0 +1,28 @@
+footer{
+    background-color: #2a73dd;
+    padding-bottom: 60px;
+    color: #fff;
+    .footer__light{
+        display: block;
+        img{
+            margin-bottom: 60px;
+        }
+    }
+    .footer__dark{
+        display: none;
+    }
+    .footer__content{
+        .footer__left{
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        .nav-link{
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 600;
+            &:hover{
+                opacity: .75;
+            }
+        }
+    }
+}

@@ -1,0 +1,386 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html, body {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 10px;
+  background-color: #f5f9fe;
+}
+
+.btn {
+  border-radius: 8px;
+  letter-spacing: 0.03rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn--outlined {
+  background: transparent;
+  color: #2a73dd;
+  border: 2px solid #2a73dd;
+  transition: all 0.5s;
+  padding: 13.5px 44px;
+  margin-right: 7px;
+  box-shadow: 0 3px 6px #c9d8f4;
+}
+.btn--outlined:hover {
+  background-color: #2a73dd;
+  color: white;
+  border: 2px solid #2a73dd;
+}
+
+.btn--contained {
+  background: linear-gradient(120deg, #60a4f4, #2a73dd);
+  color: white;
+  padding: 15.5px 44px;
+  border: none;
+  transition: all 0.5s;
+}
+.btn--contained:hover {
+  color: white;
+  opacity: 0.7;
+}
+
+.btn--buynow {
+  padding: 8px 18px;
+  background-color: #f5f9fe;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  color: #2a73dd;
+  border: none;
+  transition: all 0.5s;
+  box-shadow: 2px 2px 4px #e2ebfc, -2px -2px 4px #fff;
+}
+.btn--buynow:hover {
+  box-shadow: inset 1px 1px 3px #e2ebfc, inset -2px -2px 5px #fff;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #f5f9fe;
+  box-shadow: 0 2px 4px #e2ebfc;
+  z-index: 10;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__container button.navbar-toggler:focus {
+  outline: none;
+}
+.header__container button.navbar-toggler .navbar-toggler-icon {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.header__container .header__logo a {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2a73dd;
+}
+.header__container .header__logo a:hover {
+  text-decoration: none;
+}
+.header__container .header__nav .header__nav-list {
+  display: flex;
+}
+.header__container .header__nav .header__nav-list .header__nav-item {
+  padding: 25px;
+}
+.header__container .header__nav .header__nav-list .header__nav-item a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1d365e;
+}
+.header__container .header__nav .header__nav-list .header__nav-item a::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: #2a73dd;
+  transform: scale(0);
+  transition: all 0.2s;
+}
+.header__container .header__nav .header__nav-list .header__nav-item:hover a {
+  color: #2a73dd;
+  text-decoration: none;
+}
+.header__container .header__nav .header__nav-list .header__nav-item:hover a::after {
+  transform: scale(1);
+}
+.header__container .header__nav .header__nav-list .header__nav-item--active a {
+  color: #2a73dd;
+}
+.header__container .header__nav .header__nav-list .header__nav-item--active a::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: #2a73dd;
+  transform: scale(1);
+}
+
+@media screen and (max-width: 991px) {
+  .header__nav-item .nav-link {
+    text-align: center;
+  }
+}
+.banner {
+  padding: 225px 0px;
+  background-image: url(../../images/product-header-bg.jpeg);
+  background-size: cover;
+  background-position: center bottom;
+}
+.banner .banner__container .banner__content .banner__title {
+  font-size: 7rem;
+  font-weight: 700;
+  color: #2a73dd;
+  margin-bottom: 7px;
+}
+.banner .banner__container .banner__content .banner__sub-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #1d365e;
+  margin-bottom: 30px;
+}
+.banner .banner__container .banner__content .banner__descriptions {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #656774;
+  margin-bottom: 25px;
+}
+.banner .banner__container .banner__image img {
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 768px) {
+  .banner .banner__container .banner__image img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .banner {
+    padding: 150px 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .banner {
+    padding: 100px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  h1.banner__title {
+    font-size: 4.4rem !important;
+  }
+}
+.products {
+  padding: 100px 0;
+}
+.products__header {
+  font-size: 3.15rem;
+  margin-bottom: 70px;
+  font-weight: 700;
+  color: #1d365e;
+}
+.products__card .card-body {
+  padding: 17.5px;
+  font-size: 1.4rem;
+}
+.products__card .card__phones {
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: #f5f9fe;
+  box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
+  border: none;
+}
+.products__card .card__phones img {
+  box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
+  border-radius: 8px;
+}
+.products__card .card-title {
+  color: #1d365e;
+  font-size: 2rem;
+  margin-bottom: 7px;
+  font-weight: 700;
+}
+.products__card .card-text {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  color: #1d365e;
+  font-weight: 400;
+}
+.products__card .cardphone__rating {
+  color: #f9d412;
+}
+
+footer {
+  background-color: #2a73dd;
+  padding-bottom: 60px;
+  color: #fff;
+}
+footer .footer__light {
+  display: block;
+}
+footer .footer__light img {
+  margin-bottom: 60px;
+}
+footer .footer__dark {
+  display: none;
+}
+footer .footer__content .footer__left {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+footer .footer__content .nav-link {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+footer .footer__content .nav-link:hover {
+  opacity: 0.75;
+}
+
+/*# sourceMappingURL=app.css.map */

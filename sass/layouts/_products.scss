@@ -1,0 +1,41 @@
+.products {
+  padding: 100px 0;
+  &__header {
+    font-size: 3.15rem;
+    margin-bottom: 70px;
+    font-weight: 700;
+    color: $primary-dark;
+  }
+  &__card {
+    .card-body{
+        padding: 17.5px;
+        font-size: 1.4rem;
+    }
+    .card__phones {
+      padding: 30px;
+      margin-bottom: 30px;
+      background-color: $bg-main;
+      box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
+      border: none;
+      img {
+        box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
+        border-radius: 8px;
+      }
+    }
+    .card-title {
+      color: $primary-dark;
+      font-size: 2rem;
+      margin-bottom: 7px;
+      font-weight: 700;
+    }
+    .card-text {
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
+      color: $primary-dark;
+      font-weight: 400;
+    }
+    .cardphone__rating {
+      color: $star-color;
+    }
+  }
+}
